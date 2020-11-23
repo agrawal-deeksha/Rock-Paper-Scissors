@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  background-color: rgb(88, 21, 151);
+  height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.score {
+  color: cornsilk;
+  height: 20vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.score h3 {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.intro {
+  color: cornsilk;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transition: opacity 0.5s ease;
+}
+
+.intro h1 {
+  font-size: 50px;
+}
+
+.intro button,
+.match button {
+  width: 120px;
+  height: 40px;
+  background: none;
+  border: none;
+  color: cornsilk;
+  font-size: 20px;
+  background-color: rgb(72, 145, 3);
+  border-radius: 3px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.match {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease 0.5s;
+}
+
+.winner {
+  color: cornsilk;
+  text-align: center;
+  font-size: 50px;
+}
+
+.hands,
+.options {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.player-hand {
+  transform: rotateY(180deg);
+}
+div.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+
+div.fadeIn {
+  opacity: 1;
+  pointer-events: all;
+}
