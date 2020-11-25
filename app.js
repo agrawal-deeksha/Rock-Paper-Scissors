@@ -40,7 +40,12 @@ const game = () => {
         const playerPlay = this.textContent;
         pImage.src = "assets/rock.png";
         cImage.src = "assets/rock.png";
-
+        pImage.classList.remove("shakePlayer");
+        cImage.classList.remove("shakeComputer");
+        void cImage.offsetWidth;
+        void pImage.offsetWidth;
+        cImage.classList.add("shakeComputer");
+        pImage.classList.add("shakePlayer");
         setTimeout(function () {
           const randomNumber = Math.floor(Math.random() * 3);
           const helpArray = ["rock", "paper", "scissors"];

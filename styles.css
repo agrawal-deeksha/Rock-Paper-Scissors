@@ -75,6 +75,7 @@ section {
 .player-hand {
   transform: rotateY(180deg);
 }
+
 div.fadeOut {
   opacity: 0;
   pointer-events: none;
@@ -83,4 +84,50 @@ div.fadeOut {
 div.fadeIn {
   opacity: 1;
   pointer-events: all;
+}
+
+@keyframes shakeComputerHand {
+  0% {
+    transform: translateY(0px);
+  }
+  20% {
+    transform: translateY(-50px);
+  }
+  40% {
+    transform: translateY(0px);
+  }
+  60% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes shakePlayerHand {
+  0% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  20% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  40% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  60% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  100% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+}
+
+.shakeComputer {
+  animation-name: shakeComputerHand;
+  animation-duration: 0.5s;
+}
+
+.shakePlayer {
+  animation-name: shakePlayerHand;
+  animation-duration: 0.5s;
 }
